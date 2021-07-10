@@ -1,0 +1,265 @@
+/* --------------------------------------------------- */
+
+
+/* -----------------------section--------------------- */
+
+
+/* --------------------------------------------------- */
+
+.section {
+    margin-top: 80px;
+    padding: 10px 0;
+    background-color: #fafafa;
+}
+
+.section-home {
+    width: 90%;
+}
+
+.section-text {
+    font-size: 1.4rem;
+}
+
+.section-list {
+    list-style-type: none;
+    border: 2px solid #ffbf47;
+}
+
+.section-list_item {
+    margin-bottom: 10px;
+}
+
+.section-list_item_flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(245, 245, 130, 0.5);
+    margin: 10px 0;
+}
+
+.section-list_item_text {
+    margin: 0;
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.section-list_item_btn {
+    margin: 0;
+    font-size: 1.4rem;
+    padding: 10px;
+    border: none;
+    background-color: #f3c672;
+    cursor: pointer;
+}
+
+.section-list_item_pay {
+    margin-top: 0;
+}
+
+.section-pay {
+    margin: 10px auto;
+    padding: 10px 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.section-pay_inp {
+    height: 30px;
+    flex: 1;
+    font-size: 1.6rem;
+    color: #000;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+.section-pay_btn {
+    height: 30px;
+    border: none;
+    outline: none;
+    width: 50px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #000;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.section-list_item_width {
+    width: 90%;
+}
+
+.section-list-flex {
+    background-color: #ffbf47;
+    margin: 0;
+}
+
+.section-product {
+    border: 2px solid rgba(116, 247, 99, 0.5);
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.section-product_text {
+    font-size: 1.4rem;
+    background-color: rgba(116, 247, 99, 0.5);
+    padding: 10px 0 10px 10px;
+}
+
+.section-product_div {
+    padding: 10px;
+}
+
+.section-product_list {
+    list-style-type: none;
+}
+
+.section-product_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: rgba(245, 146, 159, 0.5);
+}
+
+.section-product_img {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.section-product_info {
+    width: 100%;
+    padding: 12px;
+}
+
+.section-product_item-head {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.section-product_item_name {
+    margin-left: 0px;
+    font-size: 1.6rem;
+}
+
+.section-product_item_price {
+    margin-right: 0;
+    font-size: 1.6rem;
+    color: red;
+}
+
+.section-product_item-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.section-product_item_type {
+    width: 100%;
+}
+
+.section-product_item_color {
+    margin-left: 0px;
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+.section-product_item_size {
+    font-size: 1.4rem;
+}
+
+.section-product_item_edit {
+    display: flex;
+    align-items: center;
+}
+
+.section-product_item_repair {
+    margin-right: 10px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.section-product_item_remove {
+    margin-right: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.section-list_sumprice {
+    width: 90%;
+    border-top: 1px solid #ffaaff;
+}
+
+.section-list_sumprice_text {
+    font-size: 1.6rem;
+}
+
+.section-item_price {
+    float: right;
+}
+
+.section-item_ship {
+    float: right;
+}
+
+.section-item_sum {
+    float: right;
+    color: #ffbf47;
+}
+
+.section-list_payment {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 3px;
+}
+
+.section-item_address {
+    font-size: 1.6rem;
+}
+
+#modal * {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.btn-save,
+.btn-save_pay {
+    background-color: green;
+    border: none;
+    outline: none;
+    color: white;
+    margin: 10px;
+}
+
+.shipmethod,
+.methodpay {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.paymethod,
+.methodship {
+    background-color: #f5f5f5;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.paymethod span,
+.methodship span {
+    font-size: 5rem;
+}

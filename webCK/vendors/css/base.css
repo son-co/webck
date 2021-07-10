@@ -1,0 +1,685 @@
+:root {
+    --primary-color: rgba(255, 0, 0, .9);
+    --white-color: #fff;
+    --text-color: #333;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Button style */
+
+@keyframes fadeIN {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes headerNotify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.seclect-input {
+    margin: 0;
+    min-width: 200px;
+    height: 36px;
+    padding: 0 16px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.seclect-input_price {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.seclect-input-icon {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.seclect-input_list {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 35px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    list-style-type: none;
+    z-index: 1;
+}
+
+.seclect-input_item {
+    padding: 4px 12px;
+}
+
+.seclect-input_link {
+    text-decoration: none;
+    position: relative;
+    color: #000;
+    font-size: 1.3rem;
+    display: block;
+    right: 0;
+    padding: 4px;
+    animation: right linear 0.1s;
+}
+
+.seclect-input_link:hover {
+    right: -4px;
+    color: var(--primary-color);
+}
+
+.seclect-input:hover .seclect-input_list {
+    display: block;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+/* ------------------------------------------------------------- */
+
+
+/* -----------------------header------------------------------- */
+
+
+/* ------------------------------------------------------------- */
+
+.header {
+    height: 80px;
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.header-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.header_logo {
+    width: 100px;
+    margin: 0;
+}
+
+.header_logo_img {
+    text-decoration: none;
+    width: 70px;
+}
+
+.header_search {
+    margin-top: 5px;
+    flex: 1;
+    display: flex;
+    background-color: var(--white-color);
+    height: 40px;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.header_search-input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    color: #000;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+.header_search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 60px;
+    margin: 0 4px 0 16px;
+    border-radius: 3px;
+}
+
+.header_search-btn:hover {
+    cursor: pointer;
+}
+
+.header_search-btn-icon {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.header_list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.header_list-item {
+    margin: 14px 8px auto;
+    color: white;
+    position: relative;
+}
+
+.header_navbar_link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.header_navbar_link:hover {
+    text-decoration: none;
+    color: white
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+/* -----------------------------Thông báo------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------- */
+
+.header_list-item:hover .header_notify {
+    display: block;
+}
+
+.header_notify {
+    position: absolute;
+    display: none;
+    top: 35px;
+    width: 400px;
+    background-color: #fff;
+    right: 0;
+    border: 1px solid #d3d3d3;
+    z-index: 1;
+    /* Xuất hiện từ góc ngay dưới tb */
+    transform-origin: 90% top;
+    animation: headerNotify ease-in .25s;
+}
+
+
+/* Tạo dấu trỏ xuống của tb */
+
+.header_notify::before {
+    content: "";
+    border: 20px solid;
+    position: absolute;
+    border-color: transparent transparent #fff transparent;
+    top: -35px;
+    right: 12px;
+}
+
+
+/* Tạo cầu hover tab thông báo */
+
+.header_notify::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    width: 110px;
+    height: 20px;
+}
+
+@keyframes headerNotify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header_notify-head {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header_notify-head h3 {
+    color: black;
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 40px;
+    padding-left: 12px;
+    font-weight: 400;
+}
+
+.header_notify-list {
+    padding-left: -40px;
+    height: 50vh;
+    background-color: rgba(255, 0, 0, 0.1);
+    overflow-y: scroll;
+}
+
+.header_notify-item:hover {
+    background-color: #c3c3c3;
+}
+
+.header_notify-item {
+    display: flex;
+    padding: 8px 0;
+}
+
+.header_notify-link {
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+    width: 100%;
+}
+
+.header_notify-item:hover .header_notify-link {
+    text-decoration: none;
+}
+
+.header_notify-img {
+    width: 70px;
+    padding: 8px;
+}
+
+.header_notify-content {
+    padding-left: 8px;
+}
+
+.header_notify-name {
+    display: block;
+    font-size: 1.6rem;
+    color: black;
+}
+
+.header_notify-description {
+    font-size: 1.3rem;
+    color: #333;
+    opacity: 0.8;
+}
+
+.header_notify-footer {
+    height: 40px;
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.header_notify-footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    line-height: 40px;
+    padding-left: 12px;
+    font-weight: 400;
+}
+
+.header_notify-footer:hover a {
+    color: aqua;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+/* ===============================User========================================= */
+
+
+/* ------------------------------------------------------------------------------ */
+
+.header_navbar-user {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.header_navbar-user-img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.header_navbar-user-name {
+    margin-left: 8px;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.header_navbar-user-menu {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    background-color: #fff;
+    list-style-type: none;
+    padding: 8px 0;
+    z-index: 1;
+    display: none;
+}
+
+
+/* Tạo dấu trỏ xuống của tb */
+
+.header_navbar-user-menu::before {
+    content: "";
+    border: 15px solid;
+    position: absolute;
+    border-color: transparent transparent #fff transparent;
+    top: -30px;
+    right: 50px;
+}
+
+
+/* Tạo cầu hover tab thông báo */
+
+.header_navbar-user-menu::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    width: 150px;
+    height: 20px;
+}
+
+.header_navbar-user-item {
+    padding: 4px 8px;
+}
+
+.header_navbar-user-item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    padding: 4px 8px;
+}
+
+.header_navbar-user-item:hover {
+    background-color: #f0e8e8;
+}
+
+.header_navbar-user-item:hover a {
+    text-decoration: none;
+}
+
+.header-item_sign:hover .header_navbar-user-menu {
+    display: block;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* ----------------------------Gio hang trong------------------------------ */
+
+
+/* ------------------------------------------------------------------------------- */
+
+.header_cart-list {
+    position: absolute;
+    top: 10;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    z-index: 1;
+    margin: 8px auto;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 .2px rgba(0, 0, 0, .2), -1px 1px 0 0.2px rgba(0, 0, 0, .2);
+    display: none;
+}
+
+.header_list-item:hover .header_cart-list {
+    display: block;
+}
+
+.header_cart-list::before {
+    content: "";
+    border: 20px solid;
+    position: absolute;
+    border-color: transparent transparent #fff transparent;
+    right: 10px;
+    top: -30px;
+}
+
+.header_cart-list-no-cart {
+    padding: 25px 0;
+}
+
+.header_cart-list-p {
+    display: none;
+    color: #5a5a5a;
+    margin-top: 14px;
+    font-size: 1.6rem;
+}
+
+.header_cart-no-cart-img {
+    width: 60%;
+    display: none;
+}
+
+.header_cart-list-no-cart .header_cart-no-cart-img,
+.header_cart-list-no-cart .header_cart-list-p {
+    display: block;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* ----------------------------San pham da dat------------------------------ */
+
+
+/* ------------------------------------------------------------------------------- */
+
+.header_cart-heading {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding: 8px;
+}
+
+.header_cart-list-item {
+    padding-left: 0;
+    list-style-type: none;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.header_cart-item {
+    display: flex;
+    align-items: center;
+}
+
+.header_cart-item-img {
+    width: 42px;
+    height: 42px;
+    margin: 12px;
+}
+
+.header_cart-item-info {
+    width: 100%;
+    margin-right: 12px;
+}
+
+.header_cart-item-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_cart-item-name {
+    font-size: 1.4rem;
+    color: black;
+    margin: 0;
+}
+
+.header_cart-item-wrap {
+    margin-right: 0;
+}
+
+.header_cart-item-price {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.header_cart-item-tick {
+    font-size: 1rem;
+    margin: 0 4px;
+    color: #757575;
+}
+
+.header_cart-item-quantity {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+}
+
+.header_cart-item-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_cart-item-description {
+    font-size: 1.3rem;
+    color: #757575;
+    margin-left: 0;
+}
+
+.header_cart-item-remove {
+    margin-right: 0;
+    font-size: 1.4rem;
+    color: black;
+    cursor: pointer;
+}
+
+.header_cart-btn-link {
+    margin: 8px 16px;
+    float: right;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    width: 120px;
+    font-size: 1.4rem;
+    height: 36px;
+    padding: 8px 16px;
+}
+
+.header_cart-btn-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* --------------------------------------------------- */
+
+
+/* ----------------------Footer----------------------- */
+
+
+/* ---------------------------------------------------- */
+
+.footer {
+    height: auto;
+    background-color: rgba(0, 0, 0, .6);
+    padding-bottom: 50px;
+}
+
+.footer-store {
+    padding: 30px;
+    color: #fff;
+}
+
+.footer-store h1 {
+    font-size: 4rem;
+}
+
+.footer-info {
+    width: 90%;
+}
+
+.footer-list_info {
+    padding-top: 10px;
+    list-style-type: none;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.footer-list_info_link {
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.footer-list_social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style-type: none;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer-list_social_link {
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.footer-list_social-item {
+    margin: 0 20px 0 0;
+}
+
+.footer-list_social-item:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.footer-list_social-item:hover .footer-list_social_link {
+    color: white;
+}
+
+.footer-list_product {
+    list-style-type: none;
+    font-size: 1.8rem;
+}
+
+.footer-list_product a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-list_product_item:hover a {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}

@@ -1,0 +1,59 @@
+.slider {
+    margin-top: 80px;
+    background-color: rgb(231, 243, 177);
+    padding: 10px 0;
+}
+
+.slider-width {
+    width: 90%;
+}
+
+.slider-img {
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.section-page {
+    background-image: url(/webCK/img/line-1.png);
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+.section-blog {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+h1.blog-text {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    opacity: 1;
+}
+
+.blog-img {
+    background-size: cover;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blog {
+    margin-top: 10px;
+}
+
+.blog-text {
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
